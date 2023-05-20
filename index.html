@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="brand"><img src="assets/logo.png" alt="Arcon" class="img-logo"></a>
+        <div class="menu-btn">
+
+        </div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#">HOME</a>
+                <a href="#">ABOUT</a>
+                <a href="#">SERVICES</a>
+                <a href="#">PORTFOLIO</a>
+                <!-- <a href="#">TESTIMONIAL</a>
+                <a href="#">PRIVACY</a> -->
+                <a href="#">CONTACT</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <video class="video-slider active" src="assets/videos/IMG_1829 (video-converter.com).mp4"
+            autoplay muted loop></video>
+        <video class="video-slider" src="assets/videos/IMG_1092 (video-converter.com).mp4" autoplay muted loop></video>
+        <video class="video-slider" src="assets/videos/LUMION 10 The Black Lagoon _ Render cinematica 4k.mp4" autoplay muted loop></video>
+        <div class="content active">
+            <h1>Welcome to Arcon Landscape<br></h1>
+            <p>We offer professional services in construction landscaping within the greater Toronto area. We are well
+                equipped to help give your Landscaping a full makeover.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>value proposal<br></h1>
+            <p>Not only will you be investing on a new and improved space, you’ll also witness the market value of your
+                property rise; whether it’s a custom home Built or a residential property.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content">
+            <h1>Custom Design<br></h1>
+            <p>Tell us what you have in mind and we will implement your idea with a custom-made plan. At Arcon Landscape
+                Constructions, your immaculate and improved Landscaping is one call away</p>
+            <a href="#">Read More</a>
+        </div>
+
+        <div class="media-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        const menuBtn = document.querySelector('.menu-btn');
+        const navigation = document.querySelector('.navigation')
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            navigation.classList.toggle('active')
+        })
+
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll('.video-slider');
+        const contents = document.querySelectorAll('.content');
+        var sliderNav = function (manual) {
+            btns.forEach((btn) => {
+                btn.classList.remove('active')
+            })
+            slides.forEach((slide) => {
+                slide.classList.remove('active')
+            })
+            contents.forEach((content) => {
+                content.classList.remove('active')
+            })
+            btns[manual].classList.add('active')
+            slides[manual].classList.add('active')
+            contents[manual].classList.add('active')
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+                sliderNav(i)
+            })
+        })
+    </script>
+</body>
+
+</html>
