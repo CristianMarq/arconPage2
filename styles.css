@@ -192,6 +192,27 @@ section {
     transition-property: clip-path;
 }
 
+.about-text a {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.card a {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+}
+
 @media (max-width: 1040px) {
     header {
         padding: 12px 20px;
