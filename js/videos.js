@@ -1,18 +1,3 @@
-const menuBtn = document.querySelector('.menu-btn');
-    const navigation = document.querySelector('.navigation')
-    menuBtn.addEventListener('click', () => {
-      menuBtn.classList.toggle('active');
-      navigation.classList.toggle('active')
-    })
-
-    const menuLinks = document.querySelectorAll(".navigation-items a[href^=\"#\"]");
-
-    menuLinks.forEach(menuLinks => {
-      menuLinks.addEventListener("click", function(){
-        menuBtn.classList.remove('active');
-        navigation.classList.remove('active');
-      })
-    })
 
     const btns = document.querySelectorAll(".nav-btn");
     const slides = document.querySelectorAll('.video-slider');
