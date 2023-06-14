@@ -12,6 +12,10 @@
     margin-top: 30px;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 header {
     z-index: 999;
     position: absolute;
@@ -348,11 +352,38 @@ footer .containerFotter .sec.aboutus p{
     color: #fff;
 }
 
+.contact{
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
 
+.contact .info {
+    position: relative;
+}
 
+.contact .info li {
+    display: flex;
+    margin-bottom: 16px;
+}
 
+.contact .info li span:nth-child(1){
+    color: #fff;
+    font-size: 20;
+    margin-right: 10px;
+}
 
+.contact .info li span{
+    color: #999;
+}
 
+.contact .info li a {
+    color: #999;
+    text-decoration: none;
+}
+
+.contact .info li a:hover{
+    color: #fff;
+}
 
 
   
@@ -424,5 +455,22 @@ footer .containerFotter .sec.aboutus p{
         background: url(assets/cerrarDef.png)no-repeat;
         background-size: 25px;
         transition: 0.3s ease;
+    }
+
+    footer{
+        padding: 40px;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer .container .sec {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    footer .container .sec.aboutus, .quickLinks, .contact {
+        width: 100%;
     }
 }

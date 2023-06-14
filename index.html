@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <script defrer src="./js/videos.js"></script>
   <title>Document</title>
 </head>
 
@@ -26,18 +27,18 @@
     </div>
     <div class="navigation">
       <div class="navigation-items">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">SERVICES</a>
-        <a href="#">PORTFOLIO</a>
+        <a href="#home">HOME</a>
+        <a href="#aboutus">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#porfolio">PORTFOLIO</a>
         <!-- <a href="#">TESTIMONIAL</a>
                 <a href="#">PRIVACY</a> -->
-        <a href="#">CONTACT</a>
+        <a href="#contact">CONTACT</a>
       </div>
     </div>
   </header>
 
-  <section class="home">
+  <section class="home" id="home">
     <video class="video-slider active" src="assets/videos/IMG_1829 (video-converter.com).mp4" autoplay muted
       loop></video>
     <video class="video-slider" src="assets/videos/IMG_1092 (video-converter.com).mp4" autoplay muted loop></video>
@@ -59,7 +60,7 @@
       <h1>Custom Design<br></h1>
       <p>Tell us what you have in mind and we will implement your idea with a custom-made plan. At Arcon Landscape
         Constructions, your immaculate and improved Landscaping is one call away</p>
-      <a href="#">Read More</a>
+      <a href="#aboutus">Read More</a>
     </div>
 
     <div class="media-icons">
@@ -75,7 +76,7 @@
     </div>
   </section>
 
-  <section class="about section-padding mt-3">
+  <section class="about section-padding mt-3" id="aboutus">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-12 col-12">
@@ -92,14 +93,13 @@
               the steps in their project. We use the latest equipment and products with the best quality and offer two
               years of warranty on workmanship against settlement. If you are looking forward to making a high-quality
               change in your property, you have come to the right place</p>
-            <a href="#" class="btn btn-primary">More Info</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="service section-padding">
+  <section class="service section-padding" id="services">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -221,7 +221,7 @@
     </div>
   </section>
 
-  <section class="galery">
+  <section class="galery" id="porfolio">
 
     <div class="container">
       <div class="row">
@@ -301,7 +301,7 @@
   </section>
 
   <footer>
-    <div class="containerFotter">
+    <div class="containerFotter" id="contact">
       <div class="sec aboutus">
         <h2>About Us</h2>
         <p>Arcon Landscape Construction LTD is committed to respecting the privacy of individuals and recognizes a need
@@ -349,64 +349,7 @@
 
 
 
-  <script>
-    let list = document.querySelectorAll('.list');
-    let itembox = document.querySelectorAll('.itembox');
-
-    for (let i = 0; i < list.length; i++) {
-      list[i].addEventListener('click', function () {
-        for (let j = 0; j < list.length; j++) {
-          list[j].classList.remove('active');
-        }
-        this.classList.add('active');
-
-        let dataFilter = this.getAttribute('data-filter');
-
-        for (let k = 0; k < itembox.length; k++) {
-          itembox[k].classList.remove('active');
-          itembox[k].classList.add('hide');
-
-          if (itembox[k].getAttribute('data-item') == dataFilter || dataFilter == 'all') {
-            itembox[k].classList.remove('hide');
-            itembox[k].classList.add('active');
-          }
-        }
-      })
-    }
-
-  </script>
-  <script type="text/javascript">
-    const menuBtn = document.querySelector('.menu-btn');
-    const navigation = document.querySelector('.navigation')
-    menuBtn.addEventListener('click', () => {
-      menuBtn.classList.toggle('active');
-      navigation.classList.toggle('active')
-    })
-
-    const btns = document.querySelectorAll(".nav-btn");
-    const slides = document.querySelectorAll('.video-slider');
-    const contents = document.querySelectorAll('.content');
-    var sliderNav = function (manual) {
-      btns.forEach((btn) => {
-        btn.classList.remove('active')
-      })
-      slides.forEach((slide) => {
-        slide.classList.remove('active')
-      })
-      contents.forEach((content) => {
-        content.classList.remove('active')
-      })
-      btns[manual].classList.add('active')
-      slides[manual].classList.add('active')
-      contents[manual].classList.add('active')
-    }
-
-    btns.forEach((btn, i) => {
-      btn.addEventListener('click', () => {
-        sliderNav(i)
-      })
-    })
-  </script>
+<script src="./js/images.js"></script>
 </body>
 
 </html>
