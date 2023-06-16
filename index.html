@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <script src="./js/videos.js"></script>
+  <script src="./js/images.js"></script>
   <title>Document</title>
 </head>
 
@@ -63,8 +65,10 @@
     </div>
 
     <div class="media-icons">
-      <a target="_blank" href="https://www.facebook.com/profile.php?id=100063640626717&mibextid=LQQJ4d"><i class="fab fa-facebook-f"></i></a>
-      <a target="_blank" href="https://instagram.com/arcon_landscape_construction?igshid=MmJiY2I4NDBkZg=="><i class="fab fa-instagram"></i></a>
+      <a target="_blank" href="https://www.facebook.com/profile.php?id=100063640626717&mibextid=LQQJ4d"><i
+          class="fab fa-facebook-f"></i></a>
+      <a target="_blank" href="https://instagram.com/arcon_landscape_construction?igshid=MmJiY2I4NDBkZg=="><i
+          class="fab fa-instagram"></i></a>
       <a target="_blank" href="https://wa.me/14168882378"><i class="fab fa-whatsapp"></i></a>
     </div>
 
@@ -340,15 +344,15 @@
             <span><i class="fa fa-fax" aria-hidden="true"></i></span>
             <span>(905) 597-2378</span>
           </li>
-          
+
         </ul>
       </div>
     </div>
   </footer>
 
 
-<script>
-  const menuBtn = document.querySelector('.menu-btn');
+  <script>
+    const menuBtn = document.querySelector('.menu-btn');
     const navigation = document.querySelector('.navigation')
     menuBtn.addEventListener('click', () => {
       menuBtn.classList.toggle('active');
@@ -358,14 +362,12 @@
     const menuLinks = document.querySelectorAll(".navigation-items a[href^=\"#\"]");
 
     menuLinks.forEach(menuLinks => {
-      menuLinks.addEventListener("click", function(){
+      menuLinks.addEventListener("click", function () {
         menuBtn.classList.remove('active');
         navigation.classList.remove('active');
       })
     })
-</script>
-<script src="./js/videos.js"></script>
-<script src="./js/images.js"></script>
+  </script>
 </body>
 
 </html>
